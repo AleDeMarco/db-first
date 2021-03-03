@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Database structure</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <th>Campo</th>
+      <th>Dato</th>
+      <th>Tipologia</th>
+      <th>Valori</th>
+      <th>Attributo</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          ID
+        </td>
+        <td>
+          numero
+        </td>
+        <td>
+          BIGINT
+        </td>
+        <td>
+          -
+        </td>
+        <td>
+          PRIMARY KEY
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Marca
+        </td>
+        <td>
+          stringa
+        </td>
+        <td>
+          varchar(30)
+        </td>
+        <td>
+          -
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Modello
+        </td>
+        <td>
+          stringa
+        </td>
+        <td>
+          varchar(30)
+        </td>
+        <td>
+          -
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Numero_telaio
+        </td>
+        <td>
+          stringa
+        </td>
+        <td>
+          varchar(15)
+        </td>
+        <td>
+          ipotizzando codice di 15 caratteri
+        </td>
+        <td>
+          NOT NULL - UNIQUE
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Anno_produzione
+        </td>
+        <td>
+          data
+        </td>
+        <td>
+          YEAR
+        </td>
+        <td>
+          -
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Km_percorsi
+        </td>
+        <td>
+          numero
+        </td>
+        <td>
+          MEDIUMINT
+        </td>
+        <td>
+          FLOAT(10,0)
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Prezzo
+        </td>
+        <td>
+          numero
+        </td>
+        <td>
+          INT
+        </td>
+        <td>
+          FLOAT(10,0)
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Cambio
+        </td>
+        <td>
+          stringa
+        </td>
+        <td>
+          varchar(12)
+        </td>
+        <td>
+          manuale / sequenziale / automatico
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Potenza_cv
+        </td>
+        <td>
+          numero
+        </td>
+        <td>
+          SMALLINT
+        </td>
+        <td>
+          FLOAT(10,0)
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Carburante
+        </td>
+        <td>
+          stringa
+        </td>
+        <td>
+          varchar(10)
+        </td>
+        <td>
+          benzina / diesel / gpl / metano / elettrica / ibrida
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Venditore
+        </td>
+        <td>
+          stringa
+        </td>
+        <td>
+          varchar(15)
+        </td>
+        <td>
+          privato / concessionaria
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Posizione
+        </td>
+        <td>
+          dato
+        </td>
+        <td>
+          GEOGRAFICO
+        </td>
+        <td>
+          città
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Garanzia
+        </td>
+        <td>
+          booleano
+        </td>
+        <td>
+          TINYINT
+        </td>
+        <td>
+          si / no
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Porte
+        </td>
+        <td>
+          numero
+        </td>
+        <td>
+          TINYINT
+        </td>
+        <td>
+          3 / 5
+        </td>
+        <td>
+          NOT NULL
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Foto
+        </td>
+        <td>
+          stringa
+        </td>
+        <td>
+          varchar(255)
+        </td>
+        <td>
+          -
+        </td>
+        <td>
+          NOT NULL - DEFAULT ('../no-img.png')
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
